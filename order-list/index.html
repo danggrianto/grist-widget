@@ -38,14 +38,14 @@
             </div>
             <div class="info">
               <div class="vendor">
-                <div class="meta">Vendor: <span class="vendorName">{{ order.data.vendorName }}</span></div>
+                <div class="meta">Vendor: <span class="vendorName">{{ order.Vendor.Name }}</span></div>
             </div>
-            <div class="orderDate">Order Date: {{ order.data.orderDate }}</div>
+            <div class="orderDate">Order Date: {{ order.Order_Date }}</div>
           </div>
 
           <div class="deliverTo">
-          <div class="deliverName">Deliver To: {{ order.data.deliverName }}</div>
-          <div class="deliverAddress">Address: {{ order.data.deliverAddress }}</div>
+          <div class="deliverName">Deliver To: {{ order.Location.Name }}</div>
+          <div class="deliverAddress">Address: {{ order.Location.Address }}</div>
           </div>
         </div>
 

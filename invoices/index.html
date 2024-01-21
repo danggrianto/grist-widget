@@ -19,7 +19,7 @@
     <div id="app">
       <div class="status" v-if="status">
         <template v-if="status === 'waiting'">
-          <p>Waiting for data...</p>
+          <p>Testing Waiting for data...</p>
           <ul>
             <li v-bind:class="[tableConnected ? 'done' : '']">I need <b>read table</b> access.</li>
             <li v-bind:class="[haveRows ? 'done' : '']">I need at least one row of data.</li>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Order List</title>
+
+    <!-- A template for showing a Purchase Order in a Custom Widget in Grist. -->
+    <!-- Uses Vue.js, moment, and the Grist Plugin API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
+
+    <script src="order_list.js?ver=11"></script>
+    <script src="exampleData.js"></script>
+
+    <link rel="stylesheet" href="order_list.css?ver=17">
+  </head>
+  <body>
+    <div id="app">
+      <div class="status" v-if="status">
+        <template v-if="status === 'waiting'">
+          <p>Waiting for data...</p>
+          <ul>
+            <li v-bind:class="[tableConnected ? 'done' : '']">I need <b>read table</b> access.</li>
+            <li v-bind:class="[haveRows ? 'done' : '']">I need at least one row of data.</li>
+            <li v-bind:class="[rowConnected ? 'done' : '']">I need <b>Select By</b> set.</li>
+          </ul>
+        </template>
+        <template v-else>
+          {{ status }}
+        </template>
+      </div>
+      <template v-if="order">
+        <div class="top">
+          <div class="block">
+            <div class="header">
+              <div class="meta title">Order List</div>
+            </div>
+            <div class="info">
+              <div class="vendor">
+                <div class="meta">Vendor: <span class="vendorName">{{ order.data.vendorName }}</span></div>
+            </div>
+            <div class="orderDate">Order Date: {{ order.data.orderDate }}</div>
+          </div>
+
+          <div class="deliverTo">
+          <div class="deliverName">Deliver To: {{ order.data.deliverName }}</div>
+          <div class="deliverAddress">Address: {{ order.data.deliverAddress }}</div>
+          </div>
+        </div>
+
+        <div class="footer">
+        </div>
+      </template>
+    </div>
+  </body>
+</html>

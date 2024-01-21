@@ -46,7 +46,7 @@
           </div>
 
           <div class="purchaser">
-            <div v-for="business in (order.Purchaser ? [order.Purchaser] : [])">
+            <div v-for="business in (order.Location ? [order.Location] : [])">
               <template v-if="typeof(business) === 'string'">
                 <div class="address newlined">{{ business }}</div>
               </template>

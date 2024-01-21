@@ -19,7 +19,7 @@
     <div id="app">
       <div class="status" v-if="status">
         <template v-if="status === 'waiting'">
-          <p>Waiting for data...</p>
+          <p>Order List: Waiting for data...</p>
           <ul>
             <li v-bind:class="[tableConnected ? 'done' : '']">I need <b>read table</b> access.</li>
             <li v-bind:class="[haveRows ? 'done' : '']">I need at least one row of data.</li>
@@ -38,7 +38,7 @@
             </div>
             <div class="info">
               <div class="vendor">
-                <div class="meta">Vendor: <span class="vendorName">{{ order.Vendor.Name }}</span></div>
+                <div class="meta">Vendor: <span {{ order.Vendor.Name }}</div>
             </div>
             <div class="orderDate">Order Date: {{ order.Order_Date }}</div>
           </div>

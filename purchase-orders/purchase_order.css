@@ -3,8 +3,8 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 5px;
-  --title-fg-color: #4682B4;
-  --highlight-bg-color: #4682B4;
+  --title-fg-color: #4682b4;
+  --highlight-bg-color: #4682b4;
   --highlight-fg-color: white;
 }
 
@@ -39,7 +39,8 @@ body {
   display: block;
 }
 
-.vendor, .items {
+.vendor,
+.items {
   padding: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -78,12 +79,15 @@ table.items td {
   padding: 4px;
 }
 
-.vendor .title, table.items th, .help .title {
+.vendor .title,
+table.items th,
+.help .title {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.money, .number {
+.money,
+.number {
   text-align: right;
 }
 
@@ -131,7 +135,8 @@ div.top {
   justify-content: space-between;
 }
 
-.phone, .email {
+.phone,
+.email {
   white-space: nowrap;
 }
 
@@ -145,7 +150,9 @@ div.top {
   margin-right: 0.5em;
 }
 
-div.instructions, .newlined, p.note {
+div.instructions,
+.newlined,
+p.note {
   white-space: pre-line;
 }
 
@@ -248,3 +255,6 @@ div.column-name {
   border-radius: 0.25em;
 }
 
+.deliverTo {
+  padding: 4px;
+}
